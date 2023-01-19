@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=100, initial-scale=1.0" />
+    <!-- Links for CSS / FONTS / ICONS -->
+    <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./asset/stylesheet/stylesheet.css" />
+    <!-- Page Title -->
+    <title>Weekly Food Planner</title>
+</head>
+<body>
+<!-------------------------------------------------- Header Section ---------------------------------->
+<header>
+  <!-- Main navbar-->
+  <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+    <!-- nav bar title -->
+    <div class="navbar-brand brand">
+      <a class="navbar-item">
+        <h1 class="navBarH1">Recipe Generator</h1>
+      </a>
+    </div>
+    <!-- Nav Bar links -->
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <a href="#" class="navbar-item navBarText">Recipe Generator</a>
+        <a href="#footerContainer" class="navbar-item navBarText">BMR Calculator</a>
+      </div>
+    </div>
+  </nav>   
+</header>
+  <!----------------- End of Header Section----------------------------------------------------------->
+
+  <!------------------- Main Section ----------------------------------------------------------------->
+<main class="mainSection">
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+
+    <!-- Hero Body Section-->
+    <div class="hero-body">
+      <!-- Content from hero form -->
+      <div id="heroSectionContainer" class="container columns">
+        <!-- Hero Form -->
+        <form id="user-form" class="field column is-3">
+          <!-- Form Label-->
+          <label class="formLabel" for="foodType">
+            <p>Search For Recipes:</p>
+          </label>
+          <!-- Input Text Box -->
+          <input class="input" type="text" placeholder="Search a Recipe" name="foodType" id="recipeSearch" />
+          <!-- form submit button -->
+          <button id="searchRecBtn" class="button is-normal is-responsive" type="submit">Search</button>
+        </form>
+        <!-- Empty column to house recipe results-->
+        <div id="recipeResults" class="column is-9 columns is-flex-wrap-wrap"></div> 
+      </div>
+    </div>
+
+  </section>
+  <!--------------------------------END OF HERO SECTION ------------------------------------------>
+
+  <!------------------------------START OF DAYS OF THE WEEK -------------------------------------->
+  <section class="section" id="dayOfWeekSec">
+
+   
+    <div class="columns is-align-content-center is-justify-content-center is-align-items-center is-align-content-space-evenly  grocBtns ">
+      
+      <button id="clearListItem" class="button is-normal clearListItem">Clear Recipes</button>
+      
+      <div class="modal">
+        
+        
+      <!-- Modal to get user email info-->
+        <div class="modal-background"></div>
+        <div class="modal-content">
+          <!-- form -->
+          <form class="field" id = "emailForm">
+            <label class="label is-medium" id="emailLabel">Please Enter Your Email:</label>
+            <div class="control has-icons-left has-icons-right">
+              <input class="input is-medium" type="email" placeholder="johndoe@gmail.com" id ="emailInput">
+              <button id="emailSubmit" class="button is-normal is-responsive" type="submit">Submit</button>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope fa-xs"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check fa-xs"></i>
+              </span>
+            </div>
+          </form>
+        </div>
+        <button class="modal-close is-large" aria-label="close"></button>
+      </div>
+    </div>
+
+  </section>
+<!------------------------------- END OF DAYS OF THE WEEK ---------------------------------------->
+
+</main>
+<!----------------------------------- FOOTER ----------------------------------------------------->
+<footer class="footer">
+  <section id="footerContainer" class="columns is-flex is-justify-content-center is-align-items-center is-flex-wrap-wrap">
+
+    <div class="calc-wrap"><h3>BMR(Basal Metabolic Rate) Helps maintain healthy weight. See recipe links for calorie info</h3>
+      <div class="form-error" style="display: none;"></div>
+      <form class="info-form" id="info-form">
+        <div class="outer-box">
+          <label for="distance" class="top-label">Age:</label>
+          <div class="field-input">
+            <div class="field">
+              <input type="text" name="age" id="age" inputmode="numeric" pattern="[0-9]*">
+            </div> <!-- field -->
+
+            <div class="field">
+              <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div> <!-- .field -->
+          </div> <!-- .field-input -->
+        </div> <!-- .outer-box -->
+
+        <div class="outer-box">
+          <label for="height" class="top-label">Height:</label>
+          <div class="field-input">
+            <div class="field">
+              <input type="text" name="height_ft" id="height-_ft" inputmode="numeric" pattern="[0-9]*">
+              <label for="height_ft">feet</label>
+            </div> <!-- .field -->
+            <div class="field">
+              <input type="text" name="height_in" id="height_in" inputmode="numeric" pattern="[0-9]*">
+              <label for="height_in">inches</label>
+            </div> <!-- .field -->
+            <div class="field">
+              <input type="text" name="height_cm" id="height_cm" inputmode="numeric" pattern="[0-9]*">
+              <label for="height_cm">or centimeters</label>
+            </div><!-- .field -->
+          </div> <!-- .field-input -->
+        </div> <!-- .outer-box -->
+
+        <div class="outer-box">
+          <label for="weight" class="top-label">Your weight:</label>
+          <div class="field-input">
+            <div class="field">
+              <input type="text" name="weight" id="weight" inputmode="numeric" pattern="[0-9]*">
+            </div><!-- field -->
+            <div class="field">
+              <select name="weight_unit">
+                <option value="lb">lb</option>
+                <option value="kg">kg</option>
+              </select>
+            </div> <!-- .field -->
+          </div> <!-- .field-input -->
+        </div> <!-- .outer-box-->
+        <div class="btn-wrap outer-box">
+          <button class="form-submit">Calculate</button>
+        </div>
+      </form>
+      <div id="results" style="display: none;"></div>
+    </div>
+
+
+
+
+
+
+  </section>
+</footer>
+
+<!-- -->
+<!---------------------------------END OF FOOTER SECTION ----------------------------------------->
+
+  <!-- add script at the bottom of the body -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/draggable/1.0.0-beta.12/draggable.min.js" integrity="sha512-VTqyB/kLQGaTnF5kYAgeEFo8fwqdlAGNUQeoQi4EOmmBYTEQ/XrYC7lnzCvBBp1PR+1ODEQiT075oeUdPeFHwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="./asset/js/script.js"></script>
+  
+</body>
+</html>
