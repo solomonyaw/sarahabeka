@@ -119,6 +119,30 @@ div#carousel {
 }  
 
 @media screen and (max-width: 500px) { 
+
+  .courses-container {
+    margin:0%;
+    width: fit-content;
+
+  .word
+  {
+    word-wrap: break-word;
+  }
+
+  .course
+  {
+    flex-direction: column; 
+    
+    display: flex;
+  }
+
+  .course-info
+  {
+    flex-direction: column; 
+    
+    display: flex;
+  }
+
     .posting
     {
         display: flex;
@@ -156,7 +180,7 @@ div#carousel {
   }
 
   
-  .course-info
+  .course
   {
     flex-direction: column; 
     

@@ -1,3 +1,9 @@
+body{
+    position: fixed;
+}
+html{
+    position:static;
+}
 /* NAV BAR */
 .navbar {
     background-color: #683f2800;
@@ -174,7 +180,22 @@
     
 }
 
+@media screen and (max-device-width: 800px) {
 
+    .cardImg{
+        height: 80px;
+    }
+
+   .figureImg{
+    background-size: none;
+    background-position:center;
+    width: 50%;
+    Height: 50%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px black inset;
+}
+
+}
 .figureImg{
     background-size: cover;
     background-position:center;
@@ -329,6 +350,11 @@ a li {
 }
 
 @media only screen and (max-width: 600px) {
+
+    body{
+     position: fixed;
+    }
+
     #hero{
         overflow:scroll;
         
