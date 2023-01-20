@@ -120,33 +120,31 @@ div#carousel {
 
 @media screen and (max-width: 500px) { 
 
-  .courses-container {
-    margin:0%;
-    width: fit-content;
-
-  .word
-  {
-    word-wrap: break-word;
-  }
-
   .course
   {
-    flex-direction: column; 
-    
-    display: flex;
+    justify-content: space-between;
   }
-
-  .course-info
-  {
-    flex-direction: column; 
-    
-    display: flex;
-  }
-
     .posting
     {
         display: flex;
         flex-direction: column;
+    }
+    .course-info{
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+       
+    }
+
+    .word
+    {
+      font-size: 1px;
+    }
+    .courses-container
+    {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
     }
    
     .sarah{
