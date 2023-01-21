@@ -141,12 +141,18 @@ div#carousel {
     {
       font-size: 1px;
     }
+
+    .generator.png
+    {
+      margin-top: 100px;
+    }
+
     .courses-container
     {
-      width: 100%;
+      width: 80%;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
     }
    
     .sarah{
