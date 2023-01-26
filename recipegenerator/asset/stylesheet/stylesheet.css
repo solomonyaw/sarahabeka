@@ -15,10 +15,10 @@
     font-weight:bold;
     font-size:26px;
     text-shadow: 2px 1px 5px #000000;
-    background-color: #6d330dc6;
+    background-color: #1dc33cc6;
 }
 .navBarText:hover {
-    color:#6d330dc6 !important; /* Wouldn't overwrite the :hover blue - forced hover black */
+    color:#0eaa51c6 !important; /* Wouldn't overwrite the :hover blue - forced hover black */
     transition: all 0.5s;
 }
 /* END OF NAV BAR */
@@ -71,12 +71,15 @@
     width: 100%;
     padding: 10px;
     border: 1px solid black;
+    background-color: #1dc33cc6; 
+    color: aliceblue;
 }
 #searchRecBtn:hover {
-    background-color: #929191;
+    background-color: #910f0fe0;
     color: white;
     transform: scale(1.0);
     transition: all 0.5s;
+    transform: scale(1.1); 
 }
 /* END OF FORM */
 
@@ -123,7 +126,7 @@
 /* DAY OF WEEK BUTTONS AND CARDS */
 /* DAYS BUTTON */
 #dayOfWeekSec{
-    background-color: #764422a6;
+    background-color: #6e2e03a6;
 }
 /* DAY OF WEEK BUTTONS AND CARDS */
 .dayOfWeekCard{
