@@ -31,7 +31,7 @@
 }
 #hero {
     background-color: black;
-    background-image: url(../images/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
+    background-image:linear-gradient(black,rgba(26, 23, 23, 0.046)), url(../images/todd-quackenbush-x5SRhkFajrA-unsplash.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
