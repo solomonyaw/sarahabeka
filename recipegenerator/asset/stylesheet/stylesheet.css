@@ -19,6 +19,7 @@
 }
 .navBarText:hover {
     color:#6d330dc6 !important; /* Wouldn't overwrite the :hover blue - forced hover black */
+    transition: all 0.5s;
 }
 /* END OF NAV BAR */
 
@@ -75,6 +76,7 @@
     background-color: #929191;
     color: white;
     transform: scale(1.0);
+    transition: all 0.5s;
 }
 /* END OF FORM */
 
