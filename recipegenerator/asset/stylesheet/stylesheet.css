@@ -302,6 +302,16 @@ a li {
     font-weight: bolder;
     
 }
+
+.footer_text
+{
+   color: yellowgreen;
+}
+.footer_text:hover
+{
+   color: yellow; 
+}
+
 .groceryList li{
     font-weight: bolder;
 }
